@@ -1,0 +1,341 @@
+/* ═══════════════════════════════════════════════════════════════
+   STEDI CREATIVE — Desktop Layout  v2.0
+   769px and above · Immersive · Spatial · Premium
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --pad-x: clamp(3rem, 6vw, 7rem);
+}
+
+
+/* ─────────────────────────────────────────
+   HEADER — wide with nav
+───────────────────────────────────────── */
+.site-header {
+  padding: 1.375rem var(--pad-x);
+}
+
+.header-nav {
+  display: flex;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobile-menu {
+  display: none !important;
+}
+
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero-section {
+  padding: 0 var(--pad-x);
+}
+
+.hero-ticker {
+  /* Stretches full viewport width */
+  margin-left: calc(-1 * var(--pad-x));
+  margin-right: calc(-1 * var(--pad-x));
+  padding: 0.6rem var(--pad-x);
+}
+
+.hero-content {
+  padding-top: clamp(6rem, 14vh, 10rem);
+  padding-bottom: 4rem;
+  max-width: 80rem;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 9vw, 8.5rem);
+}
+
+.hero-body {
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  max-width: 44rem;
+}
+
+
+/* ─────────────────────────────────────────
+   STATS BAR
+───────────────────────────────────────── */
+.stats-section {
+  padding: 0 var(--pad-x);
+}
+
+.stats-grid {
+  margin: 0 calc(-1 * var(--pad-x));
+  padding: 0 var(--pad-x);
+}
+
+.stat-item {
+  padding: 2.5rem var(--pad-x);
+}
+
+.stat-num {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+
+/* ─────────────────────────────────────────
+   WORK SECTION — 2-column grid
+───────────────────────────────────────── */
+.work-section {
+  padding: clamp(4rem, 8vw, 7rem) var(--pad-x);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* 3rd card — featured full width cinematic */
+.project-card--featured {
+  grid-column: 1 / -1;
+}
+
+.project-card--featured .project-thumb-wrap {
+  aspect-ratio: 16 / 7;
+}
+
+.project-card--featured .project-card-inner {
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: flex-end;
+}
+
+.project-card--featured .project-thumb-wrap {
+  flex: 1.4;
+  aspect-ratio: 16 / 7;
+}
+
+.project-card--featured .project-meta {
+  flex: 1;
+  padding-bottom: 0.5rem;
+  max-width: 36rem;
+}
+
+.project-card--featured .project-title {
+  font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+}
+
+.project-card--featured .project-desc {
+  -webkit-line-clamp: 3;
+}
+
+/* Per-card stagger reveal */
+.project-card:nth-child(1).reveal-up { transition-delay: 0s; }
+.project-card:nth-child(2).reveal-up { transition-delay: 0.1s; }
+.project-card:nth-child(3).reveal-up { transition-delay: 0.2s; }
+
+/* Hover parallax on thumb image — subtle depth */
+.project-card-inner:hover .project-thumb {
+  transform: scale(1.05);
+}
+
+
+/* ─────────────────────────────────────────
+   PROCESS SECTION
+───────────────────────────────────────── */
+.process-section {
+  padding: clamp(4rem, 8vw, 7rem) var(--pad-x);
+}
+
+.process-step {
+  padding: 2.5rem 0;
+  align-items: center;
+}
+
+.process-step:hover {
+  padding-left: 0.75rem;
+  transition: padding-left 0.3s var(--ease-out), background 0.3s ease;
+}
+
+.process-step-num {
+  min-width: 6rem;
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+
+
+/* ─────────────────────────────────────────
+   ABOUT SECTION
+───────────────────────────────────────── */
+.about-section {
+  padding: clamp(4rem, 8vw, 7rem) var(--pad-x);
+}
+
+.about-content {
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(4rem, 8vw, 8rem);
+}
+
+.about-text {
+  flex: 1.2;
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+}
+
+.about-visual {
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
+.about-logo-img {
+  width: clamp(200px, 22vw, 340px);
+  height: clamp(200px, 22vw, 340px);
+  box-shadow: 0 16px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(124, 92, 252, 0.15);
+}
+
+
+/* ─────────────────────────────────────────
+   CTA BANNER
+───────────────────────────────────────── */
+.cta-banner {
+  padding: clamp(4rem, 8vw, 6rem) var(--pad-x);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(135deg, rgba(124, 92, 252, 0.06) 0%, rgba(0, 229, 255, 0.04) 100%);
+}
+
+.cta-banner-inner {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.cta-banner-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+}
+
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+.site-footer {
+  padding: 2.5rem var(--pad-x);
+}
+
+.footer-inner {
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-copy {
+  margin-left: auto;
+}
+
+.footer-nav {
+  margin-left: 0;
+  order: 2;
+}
+
+.footer-copy {
+  order: 3;
+}
+
+
+/* ─────────────────────────────────────────
+   MODAL — desktop sizing
+───────────────────────────────────────── */
+.modal-panel {
+  padding: 2.5rem;
+}
+
+
+/* ─────────────────────────────────────────
+   CURSOR EFFECTS
+───────────────────────────────────────── */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  a, button, [data-magnetic], [data-open-project] { cursor: none; }
+}
+
+
+/* ─────────────────────────────────────────
+   LARGE DESKTOP 1440px+
+───────────────────────────────────────── */
+@media (min-width: 1440px) {
+  :root {
+    --pad-x: clamp(5rem, 8vw, 9rem);
+  }
+
+  .hero-title {
+    font-size: clamp(7rem, 10vw, 10rem);
+  }
+
+  .projects-grid {
+    gap: 3rem;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   ULTRAWIDE 1920px+
+───────────────────────────────────────── */
+@media (min-width: 1920px) {
+  .site-main {
+    max-width: 1800px;
+  }
+
+  :root {
+    --pad-x: 8rem;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   TABLET 769–1024px
+───────────────────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --pad-x: 2.5rem;
+  }
+
+  .header-nav {
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+  }
+
+  .project-card--featured .project-card-inner {
+    flex-direction: column;
+  }
+
+  .project-card--featured .project-thumb-wrap {
+    aspect-ratio: 9 / 16;
+    flex: unset;
+    width: 100%;
+  }
+
+  .about-content {
+    gap: 3rem;
+  }
+
+  .about-logo-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cta-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .cta-banner-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+}

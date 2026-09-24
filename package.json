@@ -1,0 +1,16 @@
+{
+  "name": "stedi-creative",
+  "version": "1.0.0",
+  "description": "STEDI Creative — AI Product Advertisement Portfolio",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "echo 'Static site — no build step required'",
+    "dev": "npx serve . --listen 3000",
+    "start": "npx serve . --listen 3000",
+    "preview": "npx serve . --listen 4173"
+  }
+}

@@ -1,0 +1,394 @@
+/* ═══════════════════════════════════════════════════════════════
+   STEDI CREATIVE — Mobile Layout  v2.0
+   Touch-first · Single column · Sticky CTA bar · 320–768px
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --pad-x: 1.25rem;
+}
+
+
+/* ─────────────────────────────────────────
+   HEADER — slim, hamburger nav
+───────────────────────────────────────── */
+.site-header {
+  padding: 0.875rem var(--pad-x);
+}
+
+/* Hide desktop nav on mobile */
+.header-nav {
+  display: none;
+}
+
+/* Show hamburger on mobile */
+.hamburger {
+  display: flex;
+}
+
+/* Hide text CTA on mobile, keep just icon */
+.header-cta-link {
+  display: none;
+}
+
+.header-cta-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border-left: none;
+}
+
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero-section {
+  padding: 0 var(--pad-x);
+  min-height: 100dvh;
+}
+
+.hero-ticker {
+  margin-left: calc(-1 * var(--pad-x));
+  margin-right: calc(-1 * var(--pad-x));
+}
+
+.hero-content {
+  padding-top: calc(4rem + 56px);
+  padding-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 13vw, 4.25rem);
+}
+
+.hero-body {
+  font-size: clamp(0.9375rem, 3.5vw, 1.0625rem);
+}
+
+.hero-actions {
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hero-actions .btn-primary,
+.hero-actions .btn-ghost {
+  justify-content: center;
+  text-align: center;
+}
+
+.scroll-indicator {
+  display: none;
+}
+
+
+/* ─────────────────────────────────────────
+   STATS BAR
+───────────────────────────────────────── */
+.stats-section {
+  padding: 0 var(--pad-x);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 calc(-1 * var(--pad-x));
+}
+
+.stat-item {
+  padding: 1.5rem var(--pad-x);
+  min-width: 0;
+}
+
+.stat-divider {
+  display: none;
+}
+
+/* Add grid borders */
+.stat-item:nth-child(1),
+.stat-item:nth-child(2) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stat-item:nth-child(odd) {
+  border-right: 1px solid var(--color-border);
+}
+
+
+/* ─────────────────────────────────────────
+   WORK SECTION — single column
+───────────────────────────────────────── */
+.work-section {
+  padding: 3rem var(--pad-x) 3rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Featured card — same as others on mobile */
+.project-card--featured .project-card-inner {
+  flex-direction: column;
+}
+
+.project-card--featured .project-thumb-wrap {
+  aspect-ratio: 9 / 16;
+  flex: unset;
+  width: 100%;
+}
+
+.project-card--featured .project-title {
+  font-size: clamp(1.25rem, 5vw, 1.625rem);
+}
+
+/* Always show overlay on mobile (touch devices don't hover) */
+.project-thumb-overlay {
+  opacity: 1;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(5, 5, 10, 0.65) 0%, transparent 55%);
+}
+
+.play-hint {
+  transform: none;
+}
+
+/* Project CTA arrow — always visible on mobile */
+.project-cta-arrow {
+  opacity: 0.6;
+  transform: none;
+}
+
+/* Touch feedback */
+.project-card-inner {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.project-card-inner:active .project-thumb-wrap {
+  transform: scale(0.98);
+}
+
+
+/* ─────────────────────────────────────────
+   PROCESS SECTION
+───────────────────────────────────────── */
+.process-section {
+  padding: 3rem var(--pad-x);
+}
+
+.process-step {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+}
+
+.process-step-num {
+  min-width: auto;
+  font-size: 2rem;
+}
+
+
+/* ─────────────────────────────────────────
+   ABOUT SECTION
+───────────────────────────────────────── */
+.about-section {
+  padding: 3rem var(--pad-x);
+}
+
+.about-content {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-visual {
+  order: -1;
+  justify-content: flex-start;
+}
+
+.about-logo-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5);
+}
+
+.about-logo-glow {
+  inset: -10px;
+}
+
+.about-title {
+  font-size: clamp(1.75rem, 7vw, 2.5rem);
+}
+
+
+/* ─────────────────────────────────────────
+   CTA BANNER
+───────────────────────────────────────── */
+.cta-banner {
+  padding: 3rem var(--pad-x);
+  border-top: 1px solid var(--color-border);
+  background: linear-gradient(135deg, rgba(124, 92, 252, 0.06) 0%, rgba(0, 229, 255, 0.03) 100%);
+}
+
+.cta-banner-inner {
+  gap: 1.75rem;
+}
+
+.cta-banner-title {
+  font-size: clamp(2.5rem, 11vw, 3.5rem);
+}
+
+.cta-banner-inner .btn-primary--lg {
+  width: 100%;
+  justify-content: center;
+}
+
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+.site-footer {
+  padding: 1.75rem var(--pad-x) 7rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-inner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-nav {
+  margin-left: 0;
+  order: unset;
+  gap: 1rem;
+}
+
+.footer-copy {
+  order: unset;
+  margin-left: 0;
+}
+
+
+/* ─────────────────────────────────────────
+   STICKY CTA BAR
+───────────────────────────────────────── */
+.sticky-cta-bar {
+  display: flex;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 50;
+  padding: 0.875rem var(--pad-x);
+  padding-bottom: max(0.875rem, env(safe-area-inset-bottom, 0.875rem));
+  background: rgba(5, 5, 10, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--color-border);
+  animation: stickyCTAIn 0.5s var(--ease-out) 1s both;
+}
+
+.sticky-cta-btn {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.9375rem 1.5rem;
+  border-radius: 9999px;
+  width: 100%;
+}
+
+
+/* ─────────────────────────────────────────
+   MODAL — mobile sizing
+───────────────────────────────────────── */
+.modal-panel {
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+}
+
+
+/* ─────────────────────────────────────────
+   MOBILE MENU
+───────────────────────────────────────── */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.is-open {
+  display: flex !important;
+}
+
+
+/* ─────────────────────────────────────────
+   SMALL PHONES — 320px
+───────────────────────────────────────── */
+@media (max-width: 375px) {
+  :root {
+    --pad-x: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .mobile-nav-text {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   LANDSCAPE PHONES
+───────────────────────────────────────── */
+@media (max-width: 768px) and (orientation: landscape) and (max-height: 500px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 0;
+  }
+
+  .hero-content {
+    padding-top: calc(3rem + 56px);
+    padding-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 6vh, 3rem);
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   TABLETS 600–768px
+───────────────────────────────────────── */
+@media (min-width: 600px) and (max-width: 768px) {
+  :root {
+    --pad-x: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 8vw, 5rem);
+  }
+
+  .hero-actions {
+    flex-direction: row;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-ghost {
+    flex: unset;
+  }
+
+  .projects-grid {
+    gap: 2rem;
+  }
+
+  .cta-banner-title {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+  }
+}
