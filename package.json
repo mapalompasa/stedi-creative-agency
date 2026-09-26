@@ -8,7 +8,7 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "build": "echo 'Static site — no build step required'",
+    "build": "echo Static site no build step required",
     "dev": "npx serve . --listen 3000",
     "start": "npx serve . --listen 3000",
     "preview": "npx serve . --listen 4173"
